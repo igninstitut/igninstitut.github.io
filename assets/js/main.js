@@ -1,0 +1,2 @@
+const progress=document.getElementById('progress');
+window.addEventListener('scroll',()=>{const h=document.documentElement;const max=h.scrollHeight-h.clientHeight;progress.style.width=(max? h.scrollTop/max*100:0)+'%';},{passive:true});
