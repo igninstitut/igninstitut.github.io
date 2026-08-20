@@ -471,41 +471,40 @@ blockquote {
   background: rgba(255, 255, 255, 0.07);
 }
 
-/* --- КОМПАКТНЫЙ БЛОК АВТОРА СТАТЬИ --- */
+/* --- ОБНОВЛЕННАЯ КАРТОЧКА АВТОРА МАТЕРИАЛА (ВАРИАНТ 1) --- */
 .author-card {
-  margin: 0 clamp(18px, 6vw, 86px) 42px;
-  padding: 24px 32px;
-  border-radius: 18px;
+  max-width: 860px;
+  margin: 0 auto 42px;
+  padding: 32px 40px;
+  border-radius: 20px;
   border: 1px solid var(--line);
   background: rgba(255, 252, 247, 0.85);
   box-shadow: var(--shadow);
 }
 
 .author-card .eyebrow {
-  margin: 0 0 8px;
-  font-size: 11px;
+  margin: 0 0 12px;
+  font-size: 12px;
 }
 
 .author-info {
   display: flex;
-  align-items: baseline;
-  gap: 24px;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .author-info h3 {
-  font-size: 24px;
+  font-size: 26px;
   line-height: 1.2;
   margin: 0;
   color: var(--blue);
-  white-space: nowrap;
 }
 
 .author-info p {
-  font-size: 15px;
-  line-height: 1.45;
+  font-size: 17px;
+  line-height: 1.5;
   color: var(--ink-soft);
   margin: 0;
-  max-width: 820px;
 }
 
 /* --- ПОДВАЛ С ПОДПИСЬЮ РАЗРАБОТЧИКА --- */
@@ -580,14 +579,6 @@ blockquote {
   }
 }
 
-@media (max-width: 768px) {
-  .author-info {
-    flex-direction: column;
-    gap: 6px;
-    align-items: flex-start;
-  }
-}
-
 @media (max-width: 520px) {
   .facts {
     grid-template-columns: 1fr;
@@ -601,5 +592,8 @@ blockquote {
   }
   .brand small {
     display: none;
+  }
+  .author-card {
+    padding: 24px;
   }
 }
